@@ -1,0 +1,98 @@
+.activity{
+    background-image: url('/wp-content/themes/wood/images/headerbg.png');
+    background-size: cover;
+    min-height: calc(100vh - 75px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__wrap{
+        padding: 120px 15px 100px;
+    }
+    &__video{
+        width: 100%;
+        min-height: 320px;
+        margin: 0 0 50px;
+
+        .wp-video{
+            width: inherit !important;
+            min-height: 320px;
+
+            .mejs-video{
+                width: inherit !important;
+                min-height: 320px;
+
+                video{
+                    min-height: 320px !important;
+                }
+            }
+        }
+    }
+    &__gallery{
+        .slick-arrow{
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            transition: ease .3s;
+
+            &:hover{
+                opacity: .75;
+            }
+
+            &:before{
+                display: none;
+            }
+
+            &.slick-prev{
+                border-top: 5px solid #ef7507;
+                border-left: 5px solid #ef7507;
+                transform: translate(0, -50%) rotate(-45deg);
+                border-radius: 0;
+                left: -40px;
+            }
+            &.slick-next{
+                border-top: 5px solid #ef7507;
+                border-right: 5px solid #ef7507;
+                transform: translate(0, -50%) rotate(45deg);
+                border-radius: 0;
+                right: -40px;
+            }
+        }
+
+        .slick-list{
+            margin: 0 -10px;
+            padding-bottom: 10px;
+        }
+        .slide{
+            margin: 0 10px;
+            box-shadow: 4px 4px 0 rgba(0, 0, 0, .2);
+            transition: ease .3s;
+
+            &:hover{
+                opacity: .75;
+            }
+        }
+    }
+}
+@media (max-width: 575px){
+    .activity{
+        &__wrap{
+            padding: 80px 15px 50px;
+        }
+        &__gallery{
+            .slick-arrow{
+                width: 20px;
+                height: 20px;
+                top: -25px;
+                border-width: 3px !important;
+
+                &.slick-prev{
+                    left: 5px;
+                }
+                &.slick-next{
+                    right: 5px;
+                }
+            }
+        }
+    }
+}

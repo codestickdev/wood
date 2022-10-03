@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Caveat';
+    src: url('/wp-content/themes/wood/fonts/Caveat/Cavea.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Excon';
+    src: url('/wp-content/themes/wood/fonts/Excon/Excon-Thin.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Excon';
+    src: url('/wp-content/themes/wood/fonts/Excon/Excon-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Excon';
+    src: url('/wp-content/themes/wood/fonts/Excon/Excon-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Excon';
+    src: url('/wp-content/themes/wood/fonts/Excon/Excon-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Excon';
+    src: url('/wp-content/themes/wood/fonts/Excon/Excon-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Excon';
+    src: url('/wp-content/themes/wood/fonts/Excon/Excon-Black.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+body{
+    font-family: 'Excon', sans-serif;
+
+    input,
+    button,
+    label,
+    a{
+        font-family: 'Excon', sans-serif;
+    }
+}

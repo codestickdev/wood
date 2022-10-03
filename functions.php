@@ -141,11 +141,26 @@ function wood_scripts() {
 	wp_enqueue_style( 'wood-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'wood-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'wood-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	// jQuery
+	wp_register_script( 'wood-jquery', get_template_directory_uri() . '/plugins/jQuery/jquery-3.6.0.min.js', null, null, true );
+	wp_enqueue_script('wood-jquery');
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	// Lightbox
+	wp_enqueue_style( 'lightbox-css', get_template_directory_uri() . '/plugins/lightbox/dist/css/lightbox.min.css', array(), _S_VERSION );
+	wp_register_script( 'lightbox-script', get_template_directory_uri() . '/plugins/lightbox/dist/js/lightbox.min.js', null, null, true );
+	wp_enqueue_script('lightbox-script');
+
+	// Slick
+	wp_enqueue_style( 'slick-style', get_template_directory_uri() . '/plugins/slick/slick-theme.css', array(), _S_VERSION );
+	wp_enqueue_style( 'slick-theme', get_template_directory_uri() . '/plugins/slick/slick.css', array(), _S_VERSION );
+	wp_register_script( 'slick-script', get_template_directory_uri() . '/plugins/slick/slick.min.js', null, null, true );
+	wp_enqueue_script('slick-script');
+
+	// Custom styles
+	wp_enqueue_style( 'wood-sass', get_template_directory_uri() . '/css/custom.css', array(), _S_VERSION );
+
+	// Custom scripts
+	wp_enqueue_script( 'wood-scripts', get_template_directory_uri() . '/js/custom.js', array(), _S_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'wood_scripts' );
 
@@ -176,3 +191,22 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+
+/**
+ * Disable admin bar
+ */
+add_filter( 'show_admin_bar', '__return_false' );
+
+/**
+ * Translations
+ */
+add_action('init', function() {
+	pll_register_string('wood', 'Read more');
+	pll_register_string('wood', 'About us');
+	pll_register_string('wood', 'Products');
+	pll_register_string('wood', 'If you fee interested in our offer we invite for contact');
+	pll_register_string('wood', 'Production process');
+	pll_register_string('wood', 'Contact');
+	pll_register_string('wood', 'Let us stay in touch!');
+});

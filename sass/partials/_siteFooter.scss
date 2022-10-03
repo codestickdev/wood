@@ -1,0 +1,97 @@
+@use '../global/variables' as v;
+
+.siteFooter{
+    background-color: #3c3c3b;
+    height: 75px;
+
+    &__wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        height: inherit;
+
+        p{
+            font-size: 14px;
+            line-height: 1.2;
+            color: #fff;
+            margin: 0;
+
+            a{
+                color: #fff;
+                font-weight: 500;
+                text-decoration: none;
+                transition: ease .3s;
+
+                &:hover{
+                    opacity: .7;
+                }
+            }
+        }
+        .backtotop{
+            display: flex;
+            width: 80px;
+            height: 80px;
+            background-color: v.$orange;
+            border-radius: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: -40px;
+            transition: ease .3s;
+            cursor: pointer;
+
+            &:hover{
+                top: -50px;
+            }
+            
+            &:after{
+                content: '';
+                background-image: url('/wp-content/themes/wood/images/backtotop.png');
+                background-size: 24px;
+                width: 24px;
+                height: 13px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .siteFooter{
+        height: auto;
+        padding: 50px 0 20px;
+
+        &__wrap{
+            flex-direction: column;
+
+            p{
+                margin: 0 0 15px;
+
+                &:last-of-type{
+                    margin: 0;
+                }
+            }
+            .backtotop{
+                width: 60px;
+                height: 60px;
+                top: -80px; 
+
+                &:hover{
+                    top: -90px;
+                }
+
+                &:after{
+                    background-size: 18px;
+                    width: 18px;
+                    height: 9px;
+                }
+            }
+        }
+    }
+}

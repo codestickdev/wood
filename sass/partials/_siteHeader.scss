@@ -1,0 +1,288 @@
+@use '../global/variables' as v;
+
+.siteHeader{
+    height: 115px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    &__wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: inherit;
+    }
+
+    &__logo{
+        width: 100%;
+        max-width: 215px;
+        transition: ease .3s;
+
+        &:hover{
+            opacity: .8;
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+    &__menu{
+        .menuButton{
+            position: fixed;
+            right: -15px;
+            top: -20px;
+            cursor: pointer;
+            transition: ease .3s;
+            overflow: hidden;
+
+            &--invert{
+                filter: invert(1) brightness(150%);
+            }
+
+            &:hover{
+                opacity: .7;
+            }
+
+            img{
+                height: 80px;
+            }
+            p{
+                font-size: 18px;
+                line-height: 1;
+                color: #fff;
+                position: absolute;
+                left: -10px;
+                right: 0;
+                top: 54%;
+                margin: 0 auto;
+                transform: translate(0, -50%);
+                text-align: center;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .siteHeader{
+        height: 65px;
+
+        &__logo{
+            max-width: 160px;
+        }
+        &__menu{
+            .menuButton{
+                img{
+                    height: 65px;
+                }
+                p{
+                    font-size: 14px;
+                    top: 50%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575px){
+    .siteHeader{
+        overflow: hidden;
+        
+        &__menu{
+            .menuButton{
+                right: -15px;
+            }
+        }
+    }
+}
+
+.sideMenu{
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, .5);
+    opacity: 0;
+    pointer-events: none;
+    transition: ease .3s;
+
+    &--ready{
+        opacity: 1;
+        pointer-events: all;
+    }
+    &--active{
+        .sideMenu__wrap{
+            right: 0;
+        }
+    }
+
+    &__wrap{
+        width: 100%;
+        max-width: 375px;
+        background-color: #3c3c3b;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 30px;
+        right: -475px;
+        transition: ease .6s;
+
+        &:before{
+            content: '';
+            background-image: url('/wp-content/themes/wood/images/menu_side.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 100px;
+            height: 100vh;
+            position: absolute;
+            left: -99px;
+            top: 0;
+        }
+
+        .closeMenu{
+            width: 100%;
+            max-width: 230px;
+            margin: 0 0 60px;
+            cursor: pointer;
+            transition: ease .3s;
+
+            &:hover{
+                opacity: .7;
+            }
+
+            p{
+                width: 100%;
+                font-size: 20px;
+                line-height: 1.2;
+                color: #fff;
+                font-weight: 500;
+                margin: 0;
+                text-align: right;
+            }
+        }
+        .menu{
+            width: 100%;
+            max-width: 230px;
+
+            ul{
+                width: 100%;
+                list-style: none;
+                padding: 0;
+                margin: 0 0 60px;
+
+                li{
+                    width: 100%;
+                    margin: 0 0 25px;
+    
+                    &:last-of-type{
+                        margin: 0;
+                    }
+    
+                    a{
+                        display: block;
+                        font-size: 20px;
+                        line-height: 1.2;
+                        font-weight: 400;
+                        color: v.$orange;
+                        margin: 0;
+                        text-align: right;
+                        text-decoration: none;
+                        transition: ease .3s;
+    
+                        &:hover{
+                            opacity: .7;
+                        }
+                    }
+                }
+            }
+        }
+        .languages{
+            width: 100%;
+            max-width: 230px;
+
+            li{
+                width: 100%;
+                margin: 0 0 25px;
+                list-style: none;
+
+                &::marker{
+                    display: none;
+                }
+
+                &:last-of-type{
+                    margin: 0;
+                }
+
+                a{
+                    display: block;
+                    font-size: 20px;
+                    line-height: 1.2;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    color: v.$orange;
+                    margin: 0;
+                    text-align: right;
+                    text-decoration: none;
+                    transition: ease .3s;
+
+                    &:hover{
+                        opacity: .7;
+                    }
+                }
+            }
+        }
+    }
+    &__content{
+        padding-top: 100px;
+    }
+}
+@media (max-width: 767px){
+    .sideMenu{
+        &__wrap{
+            max-width: 320px;
+            right: -420px;
+        }
+    }
+}
+@media (max-width: 575px){
+    .sideMenu{
+        &__wrap{
+            max-width: 230px;
+            right: -330px;
+
+            .closeMenu{
+                margin: 0 0 30px;
+
+                p{
+                    font-size: 14px;
+                }
+            }
+            .menu{
+                ul{
+                    li{
+                        margin: 0 0 15px;
+
+                        a{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .languages{
+                li{
+                    margin: 0 0 15px;
+
+                    a{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

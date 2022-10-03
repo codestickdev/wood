@@ -1109,6 +1109,15 @@ html[lang=de-DE] .homeHeader__wrap .content, html[lang=fr-FR] .homeHeader__wrap 
 .activity__wrap {
   padding: 120px 15px 100px;
 }
+.activity__wrap h1 {
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 700;
+  color: #3c3c3b;
+  margin: 0 0 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
 .activity__video {
   width: 100%;
   min-height: 320px;
@@ -1164,6 +1173,19 @@ html[lang=de-DE] .homeHeader__wrap .content, html[lang=fr-FR] .homeHeader__wrap 
   opacity: 0.75;
 }
 
+@media (max-width: 1199px) {
+  .activity__wrap h1 {
+    font-size: 60px;
+    line-height: 70px;
+    margin: 0 0 20px;
+  }
+}
+@media (max-width: 767px) {
+  .activity__wrap h1 {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}
 @media (max-width: 575px) {
   .activity__wrap {
     padding: 80px 15px 50px;

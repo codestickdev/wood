@@ -7,6 +7,7 @@ get_header(); ?>
 <main class="wood wood--activity">
     <section class="activity">
         <div class="activity__wrap container">
+            <h1><?php the_title(); ?></h1>
             <div class="activity__video">
                 <?php 
                     // Build the  Shortcode

@@ -1,3 +1,5 @@
+@use '../global/variables' as v;
+
 .activity{
     background-image: url('/wp-content/themes/wood/images/headerbg.png');
     background-size: cover;
@@ -8,6 +10,16 @@
 
     &__wrap{
         padding: 120px 15px 100px;
+
+        h1{
+            font-size: 80px;
+            line-height: 90px;
+            font-weight: 700;
+            color: v.$textcolor;
+            margin: 0 0 50px;
+            text-align: center;
+            text-transform: uppercase;
+        }
     }
     &__video{
         width: 100%;
@@ -70,6 +82,27 @@
 
             &:hover{
                 opacity: .75;
+            }
+        }
+    }
+}
+@media (max-width: 1199px){
+    .activity{
+        &__wrap{
+            h1{
+                font-size: 60px;
+                line-height: 70px;
+                margin: 0 0 20px;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .activity{
+        &__wrap{            
+            h1{
+                font-size: 40px;
+                line-height: 46px;
             }
         }
     }

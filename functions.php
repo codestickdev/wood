@@ -152,7 +152,7 @@ function my_acf_json_load_point( $paths ) {
  * Enqueue scripts and styles.
  */
 function wood_scripts() {
-	$version = '1.1';
+	$version = '1.2';
 
 	wp_enqueue_style( 'wood-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'wood-style', 'rtl', 'replace' );

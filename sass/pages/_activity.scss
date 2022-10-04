@@ -1,5 +1,17 @@
 @use '../global/variables' as v;
 
+body{
+    &.page-template-page_activity{
+        .siteFooter{
+            &__wrap{
+                .backtotop{
+                    display: none !important;
+                }
+            }
+        }
+    }
+}
+
 .activity{
     background-image: url('/wp-content/themes/wood/images/headerbg.png');
     background-size: cover;
@@ -77,7 +89,6 @@
         }
         .slide{
             margin: 0 10px;
-            box-shadow: 4px 4px 0 rgba(0, 0, 0, .2);
             transition: ease .3s;
 
             &:hover{
@@ -116,14 +127,15 @@
             .slick-arrow{
                 width: 20px;
                 height: 20px;
-                top: -25px;
+                top: 50%;
                 border-width: 3px !important;
+                z-index: 9;
 
                 &.slick-prev{
-                    left: 5px;
+                    left: 15px;
                 }
                 &.slick-next{
-                    right: 5px;
+                    right: 15px;
                 }
             }
         }

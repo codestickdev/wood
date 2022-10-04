@@ -125,11 +125,16 @@
      * Menu subpage fix
      */
     $(document).ready(function(){
-        $('.menu-item-type-custom').each(function(){
-            var link = $(this).find('a'),
-                href = link.attr('href');
-            
-            link.attr('href', '/' + href);
-        })
+        if($('body').hasClass('page-template-page_activity')){
+            $('.menu-item-type-custom').each(function(){
+                var link = $(this).find('a'),
+                    href = link.attr('href');
+                
+                link.attr('href', '/' + href);
+            });
+    
+            var logohref = $('.siteHeader__logo').attr('href');
+            $('.siteHeader__logo').attr('href', '/' + logohref);
+        }
     });
 }(jQuery));

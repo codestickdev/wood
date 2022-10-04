@@ -852,6 +852,9 @@ html[lang=de-DE] .homeHeader__wrap .content, html[lang=fr-FR] .homeHeader__wrap 
   .homeProducts__list .product__info p.lead {
     font-size: 18px;
   }
+  .homeProducts__list .product__info .gallery {
+    display: none !important;
+  }
   .homeProducts__footer {
     margin: 50px 0 0;
   }
@@ -1098,6 +1101,10 @@ html[lang=de-DE] .homeHeader__wrap .content, html[lang=fr-FR] .homeHeader__wrap 
     font-size: 16px;
   }
 }
+body.page-template-page_activity .siteFooter__wrap .backtotop {
+  display: none !important;
+}
+
 .activity {
   background-image: url("/wp-content/themes/wood/images/headerbg.png");
   background-size: cover;
@@ -1166,7 +1173,6 @@ html[lang=de-DE] .homeHeader__wrap .content, html[lang=fr-FR] .homeHeader__wrap 
 }
 .activity__gallery .slide {
   margin: 0 10px;
-  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
   transition: ease 0.3s;
 }
 .activity__gallery .slide:hover {
@@ -1193,14 +1199,15 @@ html[lang=de-DE] .homeHeader__wrap .content, html[lang=fr-FR] .homeHeader__wrap 
   .activity__gallery .slick-arrow {
     width: 20px;
     height: 20px;
-    top: -25px;
+    top: 50%;
     border-width: 3px !important;
+    z-index: 9;
   }
   .activity__gallery .slick-arrow.slick-prev {
-    left: 5px;
+    left: 15px;
   }
   .activity__gallery .slick-arrow.slick-next {
-    right: 5px;
+    right: 15px;
   }
 }
 /**

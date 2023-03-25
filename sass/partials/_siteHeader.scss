@@ -29,6 +29,17 @@
         }
     }
     &__menu{
+        .outerlink{
+            position: absolute;
+            top: 20px;
+            right: 130px;
+            color: #000;
+            transition: ease .3s;
+
+            &:hover{
+                opacity: .7;
+            }
+        }
         .menuButton{
             position: fixed;
             right: -15px;
@@ -71,6 +82,11 @@
             max-width: 160px;
         }
         &__menu{
+            .outerlink{
+                font-size: 14px;
+                top: 15px;
+                right: 100px;
+            }
             .menuButton{
                 img{
                     height: 65px;
@@ -90,6 +106,17 @@
         &__menu{
             .menuButton{
                 right: -15px;
+            }
+        }
+    }
+}
+@media (max-width: 420px){
+    .siteHeader{
+        &__menu{
+            .outerlink{
+                font-size: 12px;
+                top: 46px;
+                right: 10px;
             }
         }
     }

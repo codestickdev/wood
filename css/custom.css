@@ -124,6 +124,16 @@ body a {
 .siteHeader__logo img {
   width: 100%;
 }
+.siteHeader__menu .outerlink {
+  position: absolute;
+  top: 20px;
+  right: 130px;
+  color: #000;
+  transition: ease 0.3s;
+}
+.siteHeader__menu .outerlink:hover {
+  opacity: 0.7;
+}
 .siteHeader__menu .menuButton {
   position: fixed;
   right: -15px;
@@ -161,6 +171,11 @@ body a {
   .siteHeader__logo {
     max-width: 160px;
   }
+  .siteHeader__menu .outerlink {
+    font-size: 14px;
+    top: 15px;
+    right: 100px;
+  }
   .siteHeader__menu .menuButton img {
     height: 65px;
   }
@@ -175,6 +190,13 @@ body a {
   }
   .siteHeader__menu .menuButton {
     right: -15px;
+  }
+}
+@media (max-width: 420px) {
+  .siteHeader__menu .outerlink {
+    font-size: 12px;
+    top: 46px;
+    right: 10px;
   }
 }
 .sideMenu {

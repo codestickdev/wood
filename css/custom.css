@@ -126,13 +126,21 @@ body a {
 }
 .siteHeader__menu .outerlink {
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 130px;
   color: #000;
+  text-decoration: none;
   transition: ease 0.3s;
 }
 .siteHeader__menu .outerlink:hover {
   opacity: 0.7;
+}
+.siteHeader__menu .outerlink span {
+  text-decoration: underline;
+}
+.siteHeader__menu .outerlink p {
+  margin: 0;
+  text-decoration: none;
 }
 .siteHeader__menu .menuButton {
   position: fixed;
@@ -173,7 +181,7 @@ body a {
   }
   .siteHeader__menu .outerlink {
     font-size: 14px;
-    top: 15px;
+    top: 10px;
     right: 100px;
   }
   .siteHeader__menu .menuButton img {

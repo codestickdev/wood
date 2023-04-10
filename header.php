@@ -29,7 +29,7 @@
 				<img src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>" />
 			</a>
 			<div class="siteHeader__menu">
-				<a href="https://petgarden.pl/" target="_blank" class="outerlink">www.petgarden.pl</a>
+				<a href="https://petgarden.pl/" target="_blank" class="outerlink"><span>www.petgarden.pl</span><p>Online shop</p></a>
 				<div class="menuButton">
 					<img src="<?php echo get_template_directory_uri() . '/images/menu_button.svg'; ?>" />
 					<p>menu →</p>
